@@ -1,0 +1,69 @@
+body {
+    background-color: #70879e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #917979;
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    border: none;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+h1, h2 {
+    font-weight: 700;
+    color: #f1f7fa;
+}
+
+p.lead {
+    font-size: 1.25rem;
+    color: #ffffff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-outline-secondary {
+    border-color: #6c757d;
+    color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #1e7e34;
+}
+
+.container {
+    max-width: 960px;
+}
+.badge {
+    font-size: 0.9rem;
+    padding: 0.5em 0.75em;
+    border-radius: 20px;
+}
+
+@media (max-width: 576px) {
+    .project-card {
+        margin-bottom: 20px;
+    }
+}
