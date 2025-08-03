@@ -1,4 +1,5 @@
 from flask import Flask, redirect , render_template,abort,request, url_for
+import os
 
 app = Flask(__name__)
 
@@ -30,7 +31,15 @@ projects = [
         "link": "https://github.com/BerattCelikk/Grails_Tracking_Carbon_Emissions",
         "technologies": ["Python", "Machine Learning", "Pandas", "Matplotlib", "Scikit-learn", "Seaborn","Tkinter"],
         "image": "images/proje4.png"
+    },
+    {
+        "title": "Advanced Matrix Calculator",
+        "description": "A comprehensive web application for matrix calculations including operations (+, -, *), special matrix checks (idempotent, nilpotent, etc.), and properties analysis (trace, symmetry).",
+        "link": "https://matrix-calculator-10wo.onrender.com/",
+        "technologies": ["Python", "Flask", "NumPy", "JavaScript", "HTML5", "CSS3"],
+        "image": "images/matrixphoto.png"
     }
+
 ]
 @app.route('/')
 def index():
@@ -45,4 +54,5 @@ def project_detail(project_id):
         
         
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
